@@ -6,8 +6,8 @@ import Button from './Button';
 const Login = () => {
   
   const [userLogin, setUserLogin] = useState({
-    email: '',
-    userpass: ''
+    businessEmail: '',
+    businessPassword: ''
   })
 
   const verifyLogin = (e) => {
@@ -17,7 +17,7 @@ const Login = () => {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(userLogin)
     };
-    const authURL = 'http://localhost:3600/login'
+    const authURL = 'http://localhost:5000/login'
     fetch(authURL, requestOptions)
       .then(response => response.json())
       .then(data => console.log(data));
@@ -36,12 +36,12 @@ const Login = () => {
         <form className="form-login" onSubmit={verifyLogin}>
           <label className="form-lbl">
             Email <br />
-            <input className="form-inpt" type="text" onChange={handleInputChange} name="email"/>
+            <input className="form-inpt" type="text" onChange={handleInputChange} name="businessEmail"/>
           </label>
           <br />
           <label className="form-lbl">
             Password <br />
-            <input className="form-inpt" type="password" onChange={handleInputChange} name="userpass"/>
+            <input className="form-inpt" type="password" onChange={handleInputChange} name="businessPassword"/>
           </label>
           <br />
           <Button cNm="form-btn" txt="Login" bckgClr="#2a2834" clr="#dbd9e2" type="submit"/>

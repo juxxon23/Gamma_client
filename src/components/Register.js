@@ -5,11 +5,11 @@ import Button from './Button';
 const Register = () => {
 
   const [userReg, setUserReg] = useState({
-    email: '',
-    userpass: '',
-    username: '',
-    comactivity: '',
-    ptype: ''
+    businessEmail: '',
+    businessPassword: '',
+    businessName: '',
+    comercialActivity: '',
+    planType: 0
   })
 
   const verifyRegister = (e) => {
@@ -19,7 +19,7 @@ const Register = () => {
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(userReg)
     };
-    fetch('http://localhost:3600/user', requestOptions)
+    fetch('http://localhost:5000/register', requestOptions)
       .then(response => response.json())
       .then(data => console.log(data));
   }
@@ -37,27 +37,27 @@ const Register = () => {
         <form className="form-register" onSubmit={verifyRegister}>
           <label className="form-lbl">
             Email <br />
-            <input className="form-inpt" type="text" onChange={handleInputChange} name="email"/>
+            <input className="form-inpt" type="text" onChange={handleInputChange} name="businessEmail"/>
           </label>
           <br />
           <label className="form-lbl">
             Password <br />
-            <input className="form-inpt" type="password" onChange={handleInputChange} name="usepass"/>
+            <input className="form-inpt" type="password" onChange={handleInputChange} name="businessPassword"/>
           </label>
           <br />
           <label className="form-lbl">
             Name <br />
-            <input className="form-inpt" type="text" onChange={handleInputChange} name="username"/>
+            <input className="form-inpt" type="text" onChange={handleInputChange} name="businessName"/>
           </label>
           <br />
           <label className="form-lbl">
             Comercial Activity <br />
-            <input className="form-inpt" type="text" onChange={handleInputChange} name="comactivity"/>
+            <input className="form-inpt" type="text" onChange={handleInputChange} name="comercialActivity"/>
           </label>
           <br />
           <label className="form-lbl">
             Plan Type <br />
-            <input className="form-inpt" type="text" onChange={handleInputChange} name="ptype"/>
+            <input className="form-inpt" type="number" onChange={handleInputChange} name="planType"/>
           </label>
           <br />
           <Button cNm="form-btn" txt="Register" bckgClr="#2a2834" clr="#dbd9e2" type="submit"/>
