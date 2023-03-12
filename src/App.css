@@ -3,18 +3,29 @@ body {
   font-family: 'Cabin', sans-serif;
 }
 
-.Header {
-  background-color: #282c34;
-  color: #dbd9e2;
-  padding: 1%;
-  border-bottom: 8px groove white;
-}
-
 h1 {
   border-style: groove;
   padding: 1%;
   background-color: #2a2834;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+ul li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.Header {
+  background-color: #282c34;
+  color: #dbd9e2;
+  padding: 1%;
+  border-bottom: 8px groove white;
 }
 
 .form-container {
@@ -66,5 +77,39 @@ h1 {
   color: #dbd9e2;
   padding: 1%;
   border-bottom: 8px groove white;
+}
+
+.service-panel {
+  width: 100px;
+  min-height: 400px;
+  padding: 0 0 10px 0;
+  background-color: #333842;
+  text-align: center;
+}
+
+.service-list {
+  padding: 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.service-list li {
+  margin: 10px;
+}
+
+.service-btn {
+  width: 80px;
+  height: 60px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+  border-color: #363342;
+  padding: 1% 2%;
+  margin: 5px 0 4px 0;
+  font-size: 18px;
+}
+
+.cpanel-flex {
+  display: flex;
 }
 

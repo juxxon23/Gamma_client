@@ -13,14 +13,12 @@ function App() {
     <Router>
       <div className="App">
         <Header />
-        <br />
         <Routes>
           <Route path='/register' element={<Register />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/' element={<Login />}/>
           <Route path='/cpanel' element={<Cpanel />}/>
         </Routes>
-        <br />
         <Footer />
       </div>
     </Router>

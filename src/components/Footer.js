@@ -2,7 +2,7 @@
 const Footer = () => {
   return(
   <footer className="Footer">
-      <h2>b_0.1.0 (2023)</h2>
+      <p>Gamma-system&copy; beta v.0.1.0_2023</p>
     </footer>
   )
 }

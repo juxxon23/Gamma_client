@@ -1,13 +1,14 @@
-const Cpanel = ({greetingMSG}) => {
+import Spanel from './Spanel';
+import Scontainer from './Scontainer';
+
+const Cpanel = () => {
   return (
-    <div>
-      <span>{greetingMSG}</span>
+    <div className="cpanel-flex">
+      <Spanel />
+      <Scontainer />
     </div>
   )
 }
 
-Cpanel.defaultProps = {
-  greetingMSG: "Welcome to Gamma-System!"
-}
 
 export default Cpanel;
