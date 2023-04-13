@@ -3,7 +3,7 @@ import Dlist from './Dlist';
 
 const Scontainer = () => {
   return (
-    <div>
+    <div className="scontainer">
       <Finder />
       <Dlist />
     </div>
