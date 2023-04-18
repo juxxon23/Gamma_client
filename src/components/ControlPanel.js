@@ -1,14 +1,12 @@
 import ServicePanel from './ServicePanel';
-import Search from './Search';
 
-
-const POSservice = () => {
+const ControlPanel = () => {
   return (
     <div className="cpanel-flex">
       <ServicePanel />
-      <Search />
     </div>
   )
 }
 
-export default POSservice;
+
+export default ControlPanel;

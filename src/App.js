@@ -5,7 +5,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Login from './components/Login';
 import Register from './components/Register';
-import Cpanel from './components/Cpanel';
+import ControlPanel from './components/ControlPanel';
 import POSservice from './components/POSservice';
 
 
@@ -19,7 +19,7 @@ function App() {
           <Route path='/register' element={<Register />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/' element={<Login />}/>
-          <Route path='/cpanel' element={<Cpanel />}/>
+          <Route path='/cpanel' element={<ControlPanel />}/>
           <Route path='/pos' element={<POSservice />}/>
         </Routes>
         <Footer />

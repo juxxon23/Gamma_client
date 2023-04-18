@@ -1,13 +1,13 @@
 import Finder from './Finder';
-import Dlist from './Dlist';
+import DataList from './DataList';
 
-const Scontainer = () => {
+const Search = () => {
   return (
     <div className="scontainer">
       <Finder />
-      <Dlist />
+      <DataList />
     </div>
   )
 }
 
-export default Scontainer;
+export default Search;

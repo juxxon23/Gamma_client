@@ -9,8 +9,16 @@ const Finder = () => {
 
   const verifySearch = (e) => {
     e.preventDefault();
-    console.log('Verifying Search..');
-    /* Falta realizar la consulta */
+    const requestOptions = {
+      method: 'GET',
+      // Falta Enviar los parametros de busqueda.
+      //headers: {'Content-Type': 'application/json'},
+      //body: JSON.stringify(search)
+    };
+    const authURL = 'http://localhost:5000/product'
+    fetch(authURL, requestOptions)
+      .then(response => response.json())
+      .then(data => console.log(data));
   }
 
   const handleInputChange = (e) => {

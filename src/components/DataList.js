@@ -1,32 +1,36 @@
 import { Fragment } from 'react';
 
-const Dlist = () => {
+const DataList = () => {
   return (
     <Fragment>
       <table>
         <tr>
-          <th>Company</th>
-          <th>Contact</th>
-          <th>Country</th>
+          <th>ID</th>
+          <th>NAME</th>
+          <th>DESCRIPTION</th>
+          <th>PRICE</th>
+        </tr>
+        <tr>
+          <td>rkiste</td>
+          <td>Maria Anders</td>
+          <td>Germany</td>
+          <td>2548484</td>
         </tr>
         <tr>
           <td>Alfreds Futterkiste</td>
           <td>Maria Anders</td>
           <td>Germany</td>
+          <td>2588784</td>
         </tr>
         <tr>
           <td>Alfreds Futterkiste</td>
           <td>Maria Anders</td>
           <td>Germany</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
+          <td>4847884</td>
         </tr>
       </table>
     </Fragment>
   )
 }
 
-export default Dlist;
+export default DataList;

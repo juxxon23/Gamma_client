@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import Button from './Button';
 
-const Spanel = () => {
+const ServicePanel = () => {
   return (
     <div className="service-panel">
         <div className="service-list">
@@ -16,4 +16,4 @@ const Spanel = () => {
   )
 }
 
-export default Spanel;
+export default ServicePanel;
