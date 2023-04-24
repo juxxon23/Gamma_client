@@ -1,31 +1,29 @@
 import { Fragment, useState } from 'react';
 import Button from './Button';
+import DataList from './DataList';
 
 const Finder = () => {
  
-  const[search, setSearch] = useState({
+  const [search, setSearch] = useState({
     finderInp: ''
+  })
+
+  const [item, setItem] = useState({
+    products: []
   })
 
   const verifySearch = (e) => {
     e.preventDefault();
-    const requestOptions = {
-      method: 'GET',
-      // Falta Enviar los parametros de busqueda.
-      //headers: {'Content-Type': 'application/json'},
-      //body: JSON.stringify(search)
-    };
     const authURL = 'http://localhost:5000/product'
-    fetch(authURL, requestOptions)
+    console.log(search)
+    fetch(authURL) 
       .then(response => response.json())
-      .then(data => console.log(data));
+      .then(data => {
+        setItem({products: data.products})});
   }
 
   const handleInputChange = (e) => {
-    setSearch({
-      ...search,
-      [e.target.name]: e.target.value
-    })
+    setSearch({ finderInp: e.target.value })
   }
 
   return (
@@ -34,6 +32,7 @@ const Finder = () => {
         <input className="form-inpt" type="text" onChange={handleInputChange} name="finderInp" placeholder="Search"/>
         <Button cNm="form-btn" txt="Find" bckgClr="#2a2834" clr="#dbd9e2" type="submit"/>
       </form>
+      <DataList itemData={item} />
     </Fragment>
   )
 }

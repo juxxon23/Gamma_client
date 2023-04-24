@@ -1,33 +1,31 @@
 import { Fragment } from 'react';
 
-const DataList = () => {
+
+const DataList = ({itemData}) => {
+  
   return (
     <Fragment>
       <table>
-        <tr>
-          <th>ID</th>
-          <th>NAME</th>
-          <th>DESCRIPTION</th>
-          <th>PRICE</th>
-        </tr>
-        <tr>
-          <td>rkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>2548484</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>2588784</td>
-        </tr>
-        <tr>
-          <td>Alfreds Futterkiste</td>
-          <td>Maria Anders</td>
-          <td>Germany</td>
-          <td>4847884</td>
-        </tr>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>DESCRIPTION</th>
+            <th>PRICE</th>
+          </tr>
+        </thead>
+        <tbody>
+          { itemData.products.map((value, index) => {
+              return(
+                <tr key={index}>
+                  <td>{value.productId}</td>
+                  <td>{value.productName}</td>
+                  <td>{value.productDescription}</td>
+                  <td>{value.productPrice}</td>
+                </tr>
+              )
+          })}
+        </tbody>
       </table>
     </Fragment>
   )
